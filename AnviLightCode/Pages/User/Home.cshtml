@@ -1,0 +1,789 @@
+﻿@page
+@model AnviLightCode.Pages.User.HomeModel
+@{
+}
+<section id="billboard">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <button class="prev slick-arrow">
+                    <i class="icon icon-arrow-left"></i>
+                </button>
+
+                <div class="main-slider pattern-overlay">
+                    <div class="slider-item">
+                        <div class="banner-content">
+                            <h2 class="banner-title">Vẻ Đẹp Đèn Lồng Việt</h2>
+                            <p>
+                                Mang nét văn hóa truyền thống vào không gian sống của bạn với những chiếc đèn lồng thủ công đầy sắc màu.
+                                Phù hợp trang trí lễ hội, tết trung thu, hoặc làm quà tặng ý nghĩa.
+                            </p>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-outline-accent btn-accent-arrow">
+                                    Xem Thêm<i class="icon icon-ns-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div><!--banner-content-->
+                        <img src="~/stylecommon/images/image_1_r.png" alt="banner" class="banner-image">
+                    </div><!--slider-item-->
+
+                    <div class="slider-item">
+                        <div class="banner-content">
+                            <h2 class="banner-title">Sắc Màu Hội Tụ</h2>
+                            <p>
+                                Đèn lồng thủ công với họa tiết tinh xảo, chất liệu thân thiện với môi trường, tỏa sáng lung linh trong mọi dịp lễ hội.
+                                Mua ngay để mang về những giá trị văn hóa và thẩm mỹ độc đáo.
+                            </p>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-outline-accent btn-accent-arrow">
+                                    Khám Phá Ngay<i class="icon icon-ns-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div><!--banner-content-->
+                        <img src="~/stylecommon/images/image_1_r.png" alt="banner" class="banner-image">
+                    </div><!--slider-item-->
+                </div><!--slider-->
+
+
+                <button class="next slick-arrow">
+                    <i class="icon icon-arrow-right"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- Đèn lồng nổi bật -->
+<section id="featured-books" class="py-5 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="section-header align-center">
+                    <div class="title">
+                        <span>Một số mặt hàng chất lượng</span>
+                    </div>
+                    <h2 class="section-title">Đèn nổi bật</h2>
+                </div>
+
+                <div class="product-list" data-aos="fade-up">
+                    <div class="row">
+
+                        <!-- Sản phẩm 1 -->
+                        <div class="col-md-3">
+                            <a href="/User/ProductDetail?id=1" class="text-decoration-none">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_1_r.png" alt="Đèn Trung Thu Rằm" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Trung Thu Rằm</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">400,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Sản phẩm 2 -->
+                        <div class="col-md-3">
+                            <a href="/User/ProductDetail?id=1" class="text-decoration-none">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_2_r.png" alt="Đèn Lồng Hình Cá" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Cá</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">450,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Sản phẩm 3 -->
+                        <div class="col-md-3">
+                            <a href="/User/ProductDetail?id=2" class="text-decoration-none">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_3_r.png" alt="Đèn Lồng Hoa Sen" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hoa Sen</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">380,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Sản phẩm 4 -->
+                        <div class="col-md-3">
+                            <a href="/User/ProductDetail?id=3" class="text-decoration-none">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_4_r.png" alt="Đèn Lồng Trăng Rằm" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Trăng Rằm</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">500,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div><!--ft-books-slider-->
+                </div><!--grid-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Đèn lồng được mua nhiều nhất -->
+<section id="best-selling" class="leaf-pattern-overlay">
+    <div class="corner-pattern-overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-8">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <figure class="products-thumb">
+                            <img src="~/stylecommon/images/image_1_r.png" alt="lantern" class="single-image">
+                        </figure>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="product-entry">
+                            <h2 class="section-title divider">Sản Phẩm Bán Chạy</h2>
+
+                            <div class="products-content">
+                                <div class="author-name">Thủ công bởi Nghệ nhân Huế</div>
+                                <h3 class="item-title">Đèn Lồng Hội An Cao Cấp</h3>
+                                <p>
+                                    Được làm thủ công tỉ mỉ từ lụa và tre tự nhiên, đèn lồng Hội An mang lại vẻ đẹp truyền thống và ấm cúng cho không gian của bạn.
+                                    Phù hợp trang trí nhà cửa, cửa hàng hoặc các dịp lễ hội.
+                                </p>
+                                <div class="item-price">450.000đ</div>
+                                <div class="btn-wrap">
+                                    <a href="#" class="btn-accent-arrow">
+                                        Mua ngay <i class="icon icon-ns-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- / row -->
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="popular-books" class="bookshelf py-5 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header align-center">
+                    <div class="title">
+                        <span>Các mặt hàng hiện có</span>
+                    </div>
+                    <h2 class="section-title">Đèn thông dụng</h2>
+                </div>
+
+                <ul class="tabs">
+                    <li data-tab-target="#all-genre" class="active tab">Tất cả</li>
+                    <li data-tab-target="#trung-thu" class="tab">Trung Thu</li>
+                    <li data-tab-target="#trang-tri" class="tab">Trang trí</li>
+                    <li data-tab-target="#tre-em" class="tab">Trẻ em</li>
+                    <li data-tab-target="#su-kien" class="tab">Sự kiện</li>
+                    <li data-tab-target="#truyen-thong" class="tab">Truyền thống</li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- Tab: Tất cả -->
+                    <div id="all-genre" data-tab-content class="active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_1_r.png" alt="Đèn Lồng Trăng Rằm" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Trăng Rằm</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">450,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_2_r.png" alt="Đèn Lồng Hoa Sen" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hoa Sen</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">380,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_3_r.png" alt="Đèn Lồng Hình Cá" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Cá</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">400,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_4_r.png" alt="Đèn Lồng Hình Rồng" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Rồng</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">550,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_1_r.png" alt="Đèn Lồng Tròn Đỏ" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Tròn Đỏ</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">300,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_2_r.png" alt="Đèn Lồng Hình Ngôi Sao" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Ngôi Sao</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">350,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_3_r.png" alt="Đèn Lồng Hình Trăng Rằm" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Trăng Rằm</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">420,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_4_r.png" alt="Đèn Lồng Thắp Sáng" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Thắp Sáng</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">480,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Trung Thu -->
+                    <div id="trung-thu" data-tab-content>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_4_r.png" alt="Đèn Lồng Trăng Rằm" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Trăng Rằm</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">450,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_1_r.png" alt="Đèn Lồng Hình Ngôi Sao" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Ngôi Sao</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">350,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_2_r.png" alt="Đèn Lồng Hình Trăng Rằm" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Trăng Rằm</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">420,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_3_r.png" alt="Đèn Lồng Thắp Sáng" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Thắp Sáng</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">480,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Trang trí -->
+                    <div id="trang-tri" data-tab-content>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_1_r.png" alt="Đèn Lồng Hoa Sen" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hoa Sen</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">380,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_3_r.png" alt="Đèn Lồng Hình Rồng" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Rồng</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">550,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_1_r.png" alt="Đèn Lồng Tròn Đỏ" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Tròn Đỏ</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">300,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_2_r.png" alt="Đèn Lồng Thắp Sáng" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Thắp Sáng</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">480,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Trẻ em -->
+                    <div id="tre-em" data-tab-content>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_1_r.png" alt="Đèn Lồng Hình Cá" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Cá</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">400,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_4_r.png" alt="Đèn Lồng Hình Ngôi Sao" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Ngôi Sao</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">350,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_2_r.png" alt="Đèn Lồng Hình Trăng Rằm" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Trăng Rằm</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">420,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_3_r.png" alt="Đèn Lồng Hình Rồng" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Rồng</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">550,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Sự kiện -->
+                    <div id="su-kien" data-tab-content>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_3_r.png" alt="Đèn Lồng Tròn Đỏ" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Tròn Đỏ</h3>
+                                        <span>Thủ công Hội An</span>
+                                        <div class="item-price">300,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_1_r.png" alt="Đèn Lồng Thắp Sáng" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Thắp Sáng</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">480,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Truyền thống -->
+                    <div id="truyen-thong" data-tab-content>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_3_r.png" alt="Đèn Lồng Hoa Sen" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hoa Sen</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">380,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="~/stylecommon/images/image_4_r.png" alt="Đèn Lồng Hình Rồng" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>Đèn Lồng Hình Rồng</h3>
+                                        <span>Thủ công Huế</span>
+                                        <div class="item-price">550,000 ₫</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--inner-tabs-->
+        </div>
+    </div>
+</section>
+
+<section id="subscribe">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-8">
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <div class="title-element">
+                            <h2 class="section-title divider">Đăng ký nhận ưu đãi</h2>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="subscribe-content" data-aos="fade-up">
+                            <p>
+                                Nhận thông tin khuyến mãi, mẫu đèn lồng mới và ưu đãi đặc biệt từ cửa hàng đèn lồng thủ công truyền thống.
+                                Đăng ký ngay để không bỏ lỡ!
+                            </p>
+                            <form id="form">
+                                <input type="text" name="email" placeholder="Nhập email của bạn tại đây">
+                                <button class="btn-subscribe">
+                                    <span>Gửi</span>
+                                    <i class="icon icon-send"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="latest-blog" class="py-5 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="section-header align-center">
+                    <div class="title">
+                        <span>Câu chuyện về đèn lồng</span>
+                    </div>
+                    <h2 class="section-title">Bài viết mới</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <article class="column" data-aos="fade-up">
+                            <figure>
+                                <a href="/User/BlogDetail" class="image-hvr-effect">
+                                    <img src="~/stylecommon/images/blog_3_r.png" alt="lantern" class="post-image">
+                                </a>
+                            </figure>
+                            <div class="post-item">
+                                <div class="meta-date">12-10-2024</div>
+                                <h3><a href="/User/BlogDetail">Lịch sử và ý nghĩa của đèn lồng Hội An</a></h3>
+
+                                <div class="links-element">
+                                    <div class="categories">văn hoá</div>
+                                    <div class="social-links">
+                                        <ul>
+                                            <li><a href="#"><i class="icon icon-facebook"></i></a></li>
+                                            <li><a href="#"><i class="icon icon-twitter"></i></a></li>
+                                            <li><a href="#"><i class="icon icon-behance-square"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="column" data-aos="fade-up" data-aos-delay="200">
+                            <figure>
+                                <a href="/User/BlogDetail" class="image-hvr-effect">
+                                    <img src="~/stylecommon/images/blog_2_r.png" alt="lantern" class="post-image">
+                                </a>
+                            </figure>
+                            <div class="post-item">
+                                <div class="meta-date">15-02-2024</div>
+                                <h3><a href="/User/BlogDetail">Làng nghề làm đèn lồng thủ công nổi tiếng</a></h3>
+
+                                <div class="links-element">
+                                    <div class="categories">nghề truyền thống</div>
+                                    <div class="social-links">
+                                        <ul>
+                                            <li><a href="#"><i class="icon icon-facebook"></i></a></li>
+                                            <li><a href="#"><i class="icon icon-twitter"></i></a></li>
+                                            <li><a href="#"><i class="icon icon-behance-square"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="column" data-aos="fade-up" data-aos-delay="400">
+                            <figure>
+                                <a href="/User/BlogDetail" class="image-hvr-effect">
+                                    <img src="~/stylecommon/images/blog_1_r.png" alt="lantern" class="post-image">
+                                </a>
+                            </figure>
+                            <div class="post-item">
+                                <div class="meta-date">20-20-2025</div>
+                                <h3><a href="/User/BlogDetail">Cách chọn đèn lồng đẹp trang trí Tết và Trung thu</a></h3>
+
+                                <div class="links-element">
+                                    <div class="categories">mẹo chọn hàng</div>
+                                    <div class="social-links">
+                                        <ul>
+                                            <li><a href="#"><i class="icon icon-facebook"></i></a></li>
+                                            <li><a href="#"><i class="icon icon-twitter"></i></a></li>
+                                            <li><a href="#"><i class="icon icon-behance-square"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="btn-wrap align-center">
+                        <a href="#" class="btn btn-outline-accent btn-accent-arrow" tabindex="0">
+                            Xem tất cả bài viết <i class="icon icon-ns-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
