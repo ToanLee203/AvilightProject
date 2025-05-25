@@ -11,6 +11,8 @@ namespace AnviLightCode.Models
         [Required, MaxLength(50)]
         public string TenLoai { get; set; }
 
+        public int KieuSanPham { get; set;  }
+
         public ICollection<SanPham> SanPhams { get; set; }
     }
 

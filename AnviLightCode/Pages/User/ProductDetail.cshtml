@@ -1,180 +1,138 @@
 ﻿@page
 @model AnviLightCode.Pages.User.ProductDetailModel
 @{
+    ViewData["Title"] = Model.Product?.TenSanPham ?? "Chi tiết sản phẩm";
 }
+
 <section id="product-detail" class="py-5 my-5 leaf-pattern-overlay">
     <div class="corner-pattern-overlay"></div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                @if (Model.Product == null)
+                {
+                    <p>Sản phẩm không tồn tại.</p>
+                }
+                else
+                {
+                    <div class="row">
+                        <!-- Hình ảnh sản phẩm -->
+                        <div class="col-md-6">
+                            <figure class="products-thumb">
+                                <a href="#" class="image-hvr-effect">
+                                    <img src="@Model.Product.HinhAnh" alt="@Model.Product.TenSanPham" class="single-image">
+                                </a>
+                            </figure>
+                        </div>
 
-                <div class="row">
-                    <!-- Hình ảnh sản phẩm -->
-                    <div class="col-md-6">
-                        <figure class="products-thumb">
-                            <a href="#" class="image-hvr-effect">
-                                <img src="~/stylecommon/images/image_1_r.png" alt="Tên sản phẩm" class="single-image">
-                            </a>
-                        </figure>
-                    </div>
+                        <!-- Thông tin sản phẩm -->
+                        <div class="col-md-6">
+                            <div class="product-entry">
+                                <h2 class="section-title divider">@Model.Product.TenSanPham</h2>
+                                <div class="products-content">
+                                    <div class="author-name">Thủ công bởi: AnviLight</div>
+                                    <h3 class="item-title">Đèn thiết kế sẵn</h3>
 
-                    <!-- Thông tin sản phẩm -->
-                    <div class="col-md-6">
-                        <div class="product-entry">
-                            <h2 class="section-title divider">Đèn lồng Hội An</h2>
-                            <div class="products-content">
-                                <div class="author-name">Thủ công bởi : AnviLight</div>
-                                <h3 class="item-title">Đèn thiết kế sẵn</h3>
-                                <p>Đèn lồng mang hơi hướng truyền thống của Hội An</p>
-                                <div class="item-price">Giá sản phẩm 500.000 ₫</div>
+                                    <!-- Lựa chọn kích thước -->
+                                    <div class="size-selection mb-3">
+                                        <label for="size"><strong>Kích thước:</strong></label>
+                                        <select id="size" class="form-select">
+                                            <option value="">-- Chọn kích thước --</option>
+                                        </select>
+                                    </div>
 
-                                <!-- Lựa chọn kích thước -->
-                                <div class="size-selection mb-3">
-                                    <label for="size" class="d-block mb-2"><strong>Kích thước:</strong></label>
-                                    <select id="size" name="size" class="form-select">
-                                        <option value="size1">Size S</option>
-                                        <option value="size2">Size M</option>
-                                        <option value="size3">Size L</option>
-                                    </select>
-                                </div>
+                                    <!-- Lựa chọn màu sắc -->
+                                    <div class="color-selection mb-3">
+                                        <label for="color"><strong>Màu sắc:</strong></label>
+                                        <select id="color" class="form-select" disabled>
+                                            <option value="">-- Chọn màu sắc --</option>
+                                        </select>
+                                    </div>
 
-                                <!-- Lựa chọn màu sắc -->
-                                <div class="color-selection mb-3">
-                                    <label for="color" class="d-block mb-2"><strong>Màu sắc:</strong></label>
-                                    <select id="color" name="color" class="form-select">
-                                        <option value="color1">Màu xanh</option>
-                                        <option value="color2">Màu đỏ</option>
-                                        <option value="color3">Màu tím</option>
-                                        <option value="color4">Màu vàng</option>
-                                    </select>
-                                </div>
-
-                                <div class="btn-wrap">
-                                    <button type="button" class="btn btn-outline-accent btn-accent-arrow add-to-cart" data-product-id="id">
-                                        Thêm vào giỏ hàng <i class="icon icon-ns-arrow-right"></i>
-                                    </button>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn btn-outline-accent btn-accent-arrow add-to-cart" data-product-id="@Model.Product.MaSanPham">
+                                            Thêm vào giỏ hàng <i class="icon icon-ns-arrow-right"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Thông tin bổ sung -->
-                <div class="row mt-5">
-                    <div class="col-md-12">
-                        <div class="section-header align-center">
-                            <h2 class="section-title">Thông tin bổ sung</h2>
-                        </div>
-                        <div class="additional-info">
-                            <p>
-                                Đèn lồng được chế tác thủ công với thiết kế tinh xảo, mang lại không gian ấm cúng và đậm chất truyền thống cho các dịp lễ hội như Trung Thu hoặc trang trí nhà cửa.
-                            </p>
-                            <ul>
-                                <li><strong>Chất liệu:</strong> Tre, vải lụa cao cấp</li>
-                                <li><strong>Kích thước:</strong> 40cm (cao) x 25cm (rộng)</li>
-                                <li><strong>Trọng lượng:</strong> 600g</li>
-                                <li><strong>Nguồn sáng:</strong> Đèn LED 3W, ánh sáng vàng ấm</li>
-                            </ul>
+                    <!-- Thông tin bổ sung -->
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <div class="section-header align-center">
+                                <h2 class="section-title">Thông tin bổ sung</h2>
+                            </div>
+                            <div class="additional-info">
+                                <p>
+                                    @Model.Product.MoTa
+                                    Đèn lồng được chế tác thủ công với thiết kế tinh xảo, mang lại không gian ấm cúng và đậm chất truyền thống cho các dịp lễ hội như Trung Thu hoặc trang trí nhà cửa.
+                                </p>
+                                <ul>
+                                    <li><strong>Chất liệu:</strong> Tre, vải lụa cao cấp</li>
+                                    <li><strong>Kích thước:</strong> 40cm (cao) x 25cm (rộng)</li>
+                                    <li><strong>Trọng lượng:</strong> 600g</li>
+                                    <li><strong>Nguồn sáng:</strong> Đèn LED 3W, ánh sáng vàng ấm</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
         </div>
     </div>
 </section>
 
-<!-- Sản phẩm liên quan -->
-<section id="related-products" class="py-5 my-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-header align-center">
-                    <div class="title">
-                        <span>Khám phá thêm</span>
-                    </div>
-                    <h2 class="section-title">Sản phẩm liên quan</h2>
-                </div>
+<!-- Script xử lý chọn kích thước và màu sắc -->
+<script>
+    var bienThes = @Html.Raw(Model.BienThesJson ?? "[]");
+    console.log("list biến thể");
+    console.log(bienThes);
 
-                <div class="product-list">
-                    <div class="row">
-                        <!-- Sản phẩm liên quan 1 -->
-                        <div class="col-md-3 col-sm-6 col-12 mb-4">
-                            <a href="/User/ProductDetail?id=1" class="text-decoration-none">
-                                <div class="product-item">
-                                    <figure class="product-style">
-                                        <img src="path/to/image1.jpg" alt="Tên sản phẩm 1" class="product-item">
-                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
-                                            Thêm vào giỏ hàng
-                                        </button>
-                                    </figure>
-                                    <figcaption>
-                                        <h3>Tên sản phẩm 1</h3>
-                                        <span>Thủ công bởi [Tên nghệ nhân]</span>
-                                        <div class="item-price">Giá sản phẩm 1 ₫</div>
-                                    </figcaption>
-                                </div>
-                            </a>
-                        </div>
+    // Lấy các thẻ HTML
+    const sizeSelect = document.getElementById('size');
+    const colorSelect = document.getElementById('color');
 
-                        <!-- Sản phẩm liên quan 2 -->
-                        <div class="col-md-3 col-sm-6 col-12 mb-4">
-                            <a href="/User/ProductDetail?id=2" class="text-decoration-none">
-                                <div class="product-item">
-                                    <figure class="product-style">
-                                        <img src="path/to/image2.jpg" alt="Tên sản phẩm 2" class="product-item">
-                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
-                                            Thêm vào giỏ hàng
-                                        </button>
-                                    </figure>
-                                    <figcaption>
-                                        <h3>Tên sản phẩm 2</h3>
-                                        <span>Thủ công bởi [Tên nghệ nhân]</span>
-                                        <div class="item-price">Giá sản phẩm 2 ₫</div>
-                                    </figcaption>
-                                </div>
-                            </a>
-                        </div>
+    // Tải danh sách kích thước duy nhất
+    const addedSizeIds = new Set();
+    bienThes.forEach(b => {
+        if (!addedSizeIds.has(b.MaKichThuoc)) {
+            addedSizeIds.add(b.MaKichThuoc);
+            const option = document.createElement('option');
+            option.value = b.MaKichThuoc;
+            option.textContent = b.TenKichThuoc;
+            sizeSelect.appendChild(option);
+        }
+    });
 
-                        <!-- Sản phẩm liên quan 3 -->
-                        <div class="col-md-3 col-sm-6 col-12 mb-4">
-                            <a href="/User/ProductDetail?id=3" class="text-decoration-none">
-                                <div class="product-item">
-                                    <figure class="product-style">
-                                        <img src="path/to/image3.jpg" alt="Tên sản phẩm 3" class="product-item">
-                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
-                                            Thêm vào giỏ hàng
-                                        </button>
-                                    </figure>
-                                    <figcaption>
-                                        <h3>Tên sản phẩm 3</h3>
-                                        <span>Thủ công bởi [Tên nghệ nhân]</span>
-                                        <div class="item-price">Giá sản phẩm 3 ₫</div>
-                                    </figcaption>
-                                </div>
-                            </a>
-                        </div>
+    // Xử lý khi chọn kích thước
+    sizeSelect.addEventListener('change', function () {
+        const selectedSize = parseInt(this.value);
+        colorSelect.innerHTML = '<option value="">-- Chọn màu sắc --</option>';
 
-                        <!-- Sản phẩm liên quan 4 -->
-                        <div class="col-md-3 col-sm-6 col-12 mb-4">
-                            <a href="/User/ProductDetail?id=4" class="text-decoration-none">
-                                <div class="product-item">
-                                    <figure class="product-style">
-                                        <img src="path/to/image4.jpg" alt="Tên sản phẩm 4" class="product-item">
-                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
-                                            Thêm vào giỏ hàng
-                                        </button>
-                                    </figure>
-                                    <figcaption>
-                                        <h3>Tên sản phẩm 4</h3>
-                                        <span>Thủ công bởi [Tên nghệ nhân]</span>
-                                        <div class="item-price">Giá sản phẩm 4 ₫</div>
-                                    </figcaption>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        if (!selectedSize) {
+            colorSelect.disabled = true;
+            return;
+        }
+
+        // Lọc theo kích thước
+        const filtered = bienThes.filter(b => b.MaKichThuoc === selectedSize);
+
+        // Loại bỏ màu trùng lặp
+        const addedColorIds = new Set();
+        filtered.forEach(b => {
+            if (!addedColorIds.has(b.MaMauSac)) {
+                addedColorIds.add(b.MaMauSac);
+                const option = document.createElement('option');
+                option.value = b.MaMauSac;
+                option.textContent = b.TenMauSac;
+                colorSelect.appendChild(option);
+            }
+        });
+
+        colorSelect.disabled = false;
+    });
+
+</script>
