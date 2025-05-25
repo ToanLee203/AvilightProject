@@ -23,9 +23,54 @@
     <link rel="stylesheet" href="~/stylecommon/css/vendor.css" />
     <link rel="stylesheet" href="~/stylecommon/style.css" />
     <link rel="icon" href="~/stylecommon/images/logo_web_kn.png" type="image/png" />
-
     <title>@ViewData["Title"] - AnviLight</title>
 </head>
+<style>
+    .user-account-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .user-account {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        user-select: none;
+    }
+
+    .icon-arrow-down {
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1000;
+        border-radius: 4px;
+    }
+
+    .dropdown-item {
+        padding: 10px 15px;
+        text-decoration: none;
+        color: black;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+        .dropdown-item:hover {
+            background-color: #f1f1f1;
+        }
+</style>
 
 <body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
 
@@ -54,27 +99,51 @@
                     </div>
                     <div class="col-md-6">
                         <div class="right-element">
-                            <a href="#" class="user-account for-buy">
-                                <i class="icon icon-user"></i><span> AnviLight</span>
-                            </a>
+
+                            <div class="user-account-dropdown">
+                                <a href="#" class="user-account for-buy" id="userDropdown" onclick="toggleDropdown(event)">
+                                    <i class="icon icon-user"></i>
+                                    <span>
+                                        @if (Context.Session.GetString("UserName") != null)
+                                        {
+                                            @Context.Session.GetString("UserName")
+                                        }
+                                        else
+                                        {
+                                            @:
+                                        }
+                                    </span>
+                                    <i class="icon icon-arrow-down"></i>
+                                </a>
+
+                                <div class="dropdown-menu" id="dropdownMenu" style="display:none;">
+                                    @if (Context.Session.GetString("UserName") == null)
+                                    {
+                                        <a href="/User/Login" class="dropdown-item">Đăng nhập</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="/User/Profile" class="dropdown-item">Thông tin tài khoản</a>
+                                    }
+                                    <a href="/User/Logout" class="dropdown-item">Đăng xuất</a>
+                                </div>
+                            </div>
+
                             <a href="/User/Cart" class="cart for-buy"><i class="icon icon-clipboard"></i><span> Giỏ hàng</span></a>
 
                             <div class="action-menu">
-
                                 <div class="search-bar">
                                     <a href="#" class="search-button search-toggle" data-selector="#header-wrap">
                                         <i class="icon icon-search"></i>
                                     </a>
                                     <form role="search" method="get" class="search-box">
-                                        <input class="search-field text search-input" placeholder="Tìm kiếm"
-                                               type="search">
+                                        <input class="search-field text search-input" placeholder="Tìm kiếm" type="search" />
                                     </form>
                                 </div>
                             </div>
 
-                        </div><!--top-right-->
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div><!--top-content-->
@@ -181,3 +250,22 @@
 </body>
 
 </html>
+<script>
+    function toggleDropdown(e) {
+        e.preventDefault();
+        const menu = document.getElementById('dropdownMenu');
+        if (menu.style.display === 'none' || menu.style.display === '') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    }
+    window.onclick = function (event) {
+        if (!event.target.matches('#userDropdown') && !event.target.closest('.user-account-dropdown')) {
+            const menu = document.getElementById('dropdownMenu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            }
+        }
+    }
+</script>

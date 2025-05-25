@@ -7,6 +7,8 @@
         public string TenKichThuoc { get; set; }
         public int MaMauSac { get; set; }
         public string TenMauSac { get; set; }
+
+        public int SoLuong { get ; set; }
     }
 
 

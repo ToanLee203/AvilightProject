@@ -12,15 +12,15 @@ namespace AnviLightCode
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // ✅ Đọc connection string từ appsettings.json hoặc appsettings.Development.json
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
             var connectionString = builder.Configuration.GetConnectionString("myCnn");
-
-            // ✅ Cấu hình DbContext dùng SQL Server
             builder.Services.AddDbContext<AnvilightDbContext>(options =>
                 options.UseSqlServer(connectionString));
-
-            // ✅ Thêm Razor Pages
             builder.Services.AddRazorPages();
             // Đăng ký Repository
             builder.Services.AddScoped<IBannerRepository, BannerRepository>();
@@ -66,6 +66,7 @@ namespace AnviLightCode
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
             app.UseAuthorization();
 
             app.MapRazorPages();

@@ -1,0 +1,51 @@
+﻿@page
+@model AnviLightCode.Pages.User.RegisterModel
+@{
+}
+<section id="register" class="py-5 my-5 leaf-pattern-overlay position-relative">
+    <div class="corner-pattern-overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="register-form p-4" style="background-color: var(--light-color); border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                    <div class="section-header align-center">
+                        <div class="title">
+                            <span>Tham gia cùng chúng tôi</span>
+                        </div>
+                        <h2 class="section-title">Đăng ký</h2>
+                    </div>
+                    <form class="mt-4">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">Tôi đồng ý với <a href="/Terms" class="text-accent">điều khoản sử dụng</a></label>
+                        </div>
+                        <div class="btn-wrap text-center">
+                            <button type="submit" class="btn btn-outline-accent btn-accent-arrow btn-full">
+                                Đăng ký <i class="icon icon-ns-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="text-center mt-3">
+                        Đã có tài khoản? <a href="/Login" class="text-accent">Đăng nhập ngay</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -9,5 +9,6 @@ namespace AnviLightCode.IService
         Task AddAsync(CartItem obj);
         Task UpdateAsync(CartItem obj);
         Task DeleteAsync(int id);
+        Task<List<CartItem>> GetByCartIdWithDetailsAsync(int cartId);
     }
 }

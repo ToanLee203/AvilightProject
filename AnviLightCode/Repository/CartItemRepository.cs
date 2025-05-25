@@ -1,5 +1,6 @@
-using AnviLightCode.Models;
+﻿using AnviLightCode.Models;
 using AnviLightCode.IRepository;
+using Microsoft.EntityFrameworkCore;
 
 namespace AnviLightCode.Repository
 {
@@ -38,6 +39,19 @@ namespace AnviLightCode.Repository
                 _context.Set<CartItem>().Remove(obj);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<CartItem>> GetByCartIdWithDetailsAsync(int cartId)
+        {
+            return await _context.CartItems
+                .Where(x => x.CartId == cartId)
+                .Include(x => x.BienTheSanPham)
+                    .ThenInclude(b => b.SanPham)  // nếu cần thêm thông tin sản phẩm
+                .Include(x => x.BienTheSanPham)
+                    .ThenInclude(b => b.KichThuoc) // nếu cần thêm thông tin kích thước
+                .Include(x => x.BienTheSanPham)
+                    .ThenInclude(b => b.MauSac) // nếu cần thêm thông tin màu sắc
+                .ToListAsync();
         }
     }
 }

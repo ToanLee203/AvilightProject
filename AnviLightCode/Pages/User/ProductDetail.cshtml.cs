@@ -69,7 +69,8 @@ namespace AnviLightCode.Pages.User
                 MaKichThuoc = x.MaKichThuoc,
                 TenKichThuoc = kichThuocs.FirstOrDefault(k => k.MaKichThuoc == x.MaKichThuoc)?.TenKichThuoc,
                 MaMauSac = x.MaMauSac,
-                TenMauSac = mauSacs.FirstOrDefault(m => m.MaMauSac == x.MaMauSac)?.TenMauSac
+                TenMauSac = mauSacs.FirstOrDefault(m => m.MaMauSac == x.MaMauSac)?.TenMauSac,
+                SoLuong = x.SoLuongTon
             }).ToList();
 
             // Serialize JSON
